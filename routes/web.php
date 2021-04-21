@@ -37,3 +37,7 @@ Route::get('/home', [HomeController::class, 'index'])
 Route::get('/admin/home', [AdminController::class, 'index'])
     ->name('admin.home')
     ->middleware('is_admin');
+
+Route::get('/admin/books', [App\Http\Controllers\AdminController::class, 'books'])
+    ->name('admin.books')
+    ->middleware('is_admin');
