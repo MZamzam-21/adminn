@@ -42,3 +42,11 @@ Route::get('/admin/home', [AdminController::class, 'index'])
 Route::get('/admin/books', [App\Http\Controllers\AdminController::class, 'books'])
     ->name('admin.books')
     ->middleware('is_admin');
+
+//  Route::get('admin/books/tambah', [AdminController::class, 'submit_book'])
+//     ->name('admin.book.submit')
+//     ->middleware('is_admin');
+
+Route::get('admin/print_books', [AdminController::class, 'print_books'])
+    ->name('admin.print.books')
+    ->middleware('is_admin');

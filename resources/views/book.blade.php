@@ -12,10 +12,13 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">{{ __('Pengelolaan Buku')}}</div>
+
 <div class="card-body">
     <table id="table-data" class="table table-bordered">
         <button class="btn btn-primary float-right" data-toggle="modal" data-target="#tambahBukuModal"><i class="fa fa-plus"></i>Tambah Data</button>
-
+        <a href="{{ route('admin.print.books') }}" target="_blank" class="mr-2 btn btn_secondary float-print">
+        <i class="fa fa-print"></i>Cetak PDF
+        </a>
         <thead>
             <tr>
                 <th>NO</th>
